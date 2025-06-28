@@ -1,2 +1,15 @@
 # epubtocbz
-从epub格式的漫画中提取图片成cbz，D指导制作
+从epub格式的漫画中提取图片成cbz的简单脚本，由D指导制作，勉强够用的水平，报错了复制给D指导让它解决
+需要安装好python并配置好环境变量。
+# 使用方法(只在windows测试过)
+1. epub_to_cbz.py
+将脚本和epub文件放在同一目录，shift+鼠标右键-在此处打开powershell
+执行`python epub_to_cbz.py`
+会在当前目录下生成comic_output文件夹包含：
+  1. 一个空的tmp临时文件夹
+  2. 一个提取的img文件夹用于微调
+  3. 以及一个与epub同名的.cbz文件
+微调完之后将所有图片打包到zip中就行了，有些阅读器不支持zip就改后缀为cbz，不需要微调直接保留cbz，删去其他无关文件就行了
+2. packfromfold.py
+将当前文件夹下的文件夹里面的图片打包为zip
+
