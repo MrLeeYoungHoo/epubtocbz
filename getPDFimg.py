@@ -36,8 +36,8 @@ for pdf_file in pdf_files:
                 image_bytes = base_image["image"]  # 原始图片二进制数据
                 image_ext = base_image["ext"]      # 图片原始格式扩展名
                 
-                # 保存图片
-                image_filename = f"page_{page_index + 1}_img_{img_index + 1}.{image_ext}"
+                # 保存图片（页码和图片编号均补零为5位）
+                image_filename = f"page_{page_index + 1:05}_img_{img_index + 1:05}.{image_ext}"
                 output_path = os.path.join(output_folder, image_filename)
                 
                 with open(output_path, "wb") as img_file:
